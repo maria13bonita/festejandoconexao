@@ -72,26 +72,6 @@ footer {
     padding: 20px 0;
 }
 
-#accessibility-menu {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#accessibility-menu button {
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
 /* Contraste alto */
 .high-contrast, .high-contrast * {
   background-color: #000 !important;
