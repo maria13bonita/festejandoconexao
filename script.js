@@ -1,30 +1,30 @@
 <body>
-  
   <script>
-    let fontSize = 100;
+  let fontSize = 100;
 
-    function increaseFont() {
-        if (fontSize < 150) {
-            fontSize += 10;
-            document.body.style.fontSize = fontSize + '%';
-        }
-    }
+  const increaseBtn = document.getElementById("increase-font");
+  const decreaseBtn = document.getElementById("decrease-font");
+  const contrastBtn = document.getElementById("toggle-contrast");
+  const resetBtn = document.getElementById("reset-accessibility");
 
-    function decreaseFont() {
-        if (fontSize > 70) {
-            fontSize -= 10;
-            document.body.style.fontSize = fontSize + '%';
-        }
-    }
+  increaseBtn.addEventListener("click", () => {
+    fontSize += 10;
+    document.body.style.fontSize = fontSize + "%";
+  });
 
-    function toggleContrast() {
-        document.body.classList.toggle('high-contrast');
-    }
+  decreaseBtn.addEventListener("click", () => {
+    fontSize = Math.max(70, fontSize - 10);
+    document.body.style.fontSize = fontSize + "%";
+  });
 
-    function resetAccessibility() {
-        fontSize = 100;
-        document.body.style.fontSize = '100%';
-        document.body.classList.remove('high-contrast');
-    }
+  contrastBtn.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast");
+  });
+
+  resetBtn.addEventListener("click", () => {
+    fontSize = 100;
+    document.body.style.fontSize = "100%";
+    document.body.classList.remove("high-contrast");
+  });
 </script>
   </body>
